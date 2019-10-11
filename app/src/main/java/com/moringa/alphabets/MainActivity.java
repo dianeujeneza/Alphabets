@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/musicnet.ttf"); //change
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/musicnet.ttf"); //change
 
         gridView = (GridView) findViewById(R.id.baseGridView);
-        gridView.setAdapter(new AlphabetAdapter(this, letters));
+        gridView.setAdapter(new AlphabetAdapter(this, letters, typeface));
     }
 }

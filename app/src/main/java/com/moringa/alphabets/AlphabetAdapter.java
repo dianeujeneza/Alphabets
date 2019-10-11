@@ -11,12 +11,12 @@ import android.widget.TextView;
 public class AlphabetAdapter extends BaseAdapter {
     private Context mContext;
     private String[] mLetters;
-//    private Typeface mTypeface;
+    private Typeface mTypeface;
 
-    public AlphabetAdapter(Context context, String[] letters) {
+    public AlphabetAdapter(Context context, String[] letters,Typeface typeface) {
         this.mContext = context;
         this.mLetters = letters;
-//        this.mTypeface = typeface;
+        this.mTypeface = typeface;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class AlphabetAdapter extends BaseAdapter {
             // set values into views
             letterView.setText("A");  // using dummy data for now
             letterView.setText(mLetters[position]);
-//            letterView.setTypeface(mTypeface);
+            letterView.setTypeface(mTypeface);
         } else {
             gridView = (View) convertView;
 
